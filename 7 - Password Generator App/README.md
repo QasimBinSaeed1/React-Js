@@ -35,3 +35,15 @@
 - Helpful in optimizing performance by preventing unnecessary re-renders of child components.
 - Accepts a callback function and an optional dependencies array.
 - Suitable for passing callbacks to child components or when defining event handlers.
+
+# React Hooks: useCallback vs useMemo
+
+|                    | useCallback                              | useMemo                                  |
+|--------------------|------------------------------------------|------------------------------------------|
+| **Description**    | Returns a memoized callback function.    | Returns a memoized value.               |
+| **Usage**          | Used to memoize callback functions.      | Used to memoize expensive calculations. |
+| **Return Value**   | Memoized callback function.              | Memoized value.                         |
+| **Purpose**        | Prevents unnecessary re-renders of child components that rely on the callback. | Prevents unnecessary recalculations of values. |
+| **Dependencies**   | Accepts a callback function and an optional dependencies array. | Accepts a function and an array of dependencies. |
+| **Optimization**   | Optimizes performance by avoiding creation of new callback functions on each render. | Optimizes performance by avoiding recalculation of values on each render. |
+| **Use Case**       | Ideal for passing stable callback functions to child components. | Ideal for optimizing performance when calculating values derived from props or state. |
